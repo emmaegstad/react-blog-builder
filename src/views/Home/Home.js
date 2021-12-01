@@ -10,12 +10,14 @@ export default function Home() {
 
   const [title, setTitle] = useState('Blog Title');
   const [subtitle, setSubtitle] = useState('Subtitle');
+  const [font, setFont] = useState('roboto-mono');
+  const [align, setAlign] = useState('');
 
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview {...{ title, setTitle, subtitle, setSubtitle }} />
-      <Editor {...{ setTitle, setSubtitle }} />
+      <Preview {...{ title, subtitle, font, align }} />
+      <Editor {...{ setTitle, setSubtitle, font, setFont, align, setAlign }} />
     </main>
   );
 }
