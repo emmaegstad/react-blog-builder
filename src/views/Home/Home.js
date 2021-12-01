@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 import Preview from '../../components/Preview/Preview';
 import Editor from '../../components/Editor/Editor';
-
 import './Home.css';
 
 export default function Home() {
@@ -15,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <Preview {...{ title, subtitle, font, align, text }} />
-      <Editor {...{ setTitle, setSubtitle, font, setFont, align, setAlign, setText }} />
+      <Editor {...{ setTitle, setSubtitle, font, setFont, setAlign, setText }} />
     </main>
   );
 }
