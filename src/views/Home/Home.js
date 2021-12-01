@@ -8,16 +8,17 @@ import './Home.css';
 export default function Home() {
   // add useState calls here for title, subtitle, font, align, and text
 
-  const [title, setTitle] = useState('Blog Title');
-  const [subtitle, setSubtitle] = useState('Subtitle');
+  const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
   const [font, setFont] = useState('roboto-mono');
-  const [align, setAlign] = useState('');
+  //   const [align, setAlign] = useState('');
+  const [text, setText] = useState('');
 
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview {...{ title, subtitle, font, align }} />
-      <Editor {...{ setTitle, setSubtitle, font, setFont, align, setAlign }} />
+      <Preview {...{ title, subtitle, font, text }} />
+      <Editor {...{ setTitle, setSubtitle, font, setFont, text, setText }} />
     </main>
   );
 }
